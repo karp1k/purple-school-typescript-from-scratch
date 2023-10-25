@@ -1,0 +1,13 @@
+"outDir": "../" // specify path where compiled js should puted
+"removeComments": true // remove comments from code
+"noEmit": true // compiling ts files but not creating them
+"noEmitOnError": true // if has typechecking error where no file creation
+"importsNotUsedAsValues": "remove" // delete "imports of types"
+"sourceMap": true // if true while in debug in browser allows to see ts code
+"inlineSourceMap": true // if true sourceMap will be in the compiled js file instead of ts.map file
+"declare": true // generate d.ts files that uses for libraries
+"emitDeclarationOnly": true // create types files "declare" class that usually used in dependencies /types/@
+"declarationDir": "./types/" // put d.ts files in specific folder
+
+"stripInternal": true // remove everything annotated with @internal from d.ts
+/* @internal */ under class exclude from "types"

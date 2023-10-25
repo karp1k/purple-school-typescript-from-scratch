@@ -1,0 +1,6 @@
+some configuration for tsconfig.json
+
+"files": ["section-6/app.ts"]  compile only specific files
+"include": ["/section-6/*"] compile only files that match pattern
+"exclude": ["/section-3/app.ts"] exclude specific files from configuration
+"extends": "./basic-tsconfig.json" extends some tsconfig.json

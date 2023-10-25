@@ -1,0 +1,8 @@
+"module": "commonjs" // how to build project
+"rootDir": "./" // root folder for project
+"baseUrl": "./" // base path for resolve
+"paths": [
+    "@lib": [./lib/my-lib] // @lib alias
+] // custom imports with alias
+"typeRoots" : [] // where @types located
+"resolveJsonModule": true // transform .json to js file

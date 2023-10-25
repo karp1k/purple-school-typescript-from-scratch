@@ -1,0 +1,4 @@
+"target": "ES2016" // which standard of JS using
+"lib": ["DOM"] // prop for specifying internal libraries
+"jsx": "preserve" // how to generate jsx files
+"nolib": true // disable all libraries
