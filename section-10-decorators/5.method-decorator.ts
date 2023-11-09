@@ -1,8 +1,3 @@
-/*
-    create decorator for catching and logging error
-    with optional parameter to rethrow error after logging
- */
-
 interface IUserService {
     users: number;
 
@@ -15,17 +10,16 @@ class UserService implements IUserService {
     constructor(public url: string) {
     }
 
-    @Catch()
+    @Log()
     getUserInDatabase(): number {
-        throw new Error("some error inside getUserInDatabase")
-       // return this.users;
+        throw new Error("error")
     }
 }
 
 // target - Class owner
 // propertyKey - function name
 // descriptor - meta info about function with function itself inside
-function Catch(rethrow?: boolean) { // factory decorator
+function Log() { // factory decorator
     return (target: Object,
             propertyKey: string | symbol,
             descriptor: TypedPropertyDescriptor<(...args: any[]) => any>)
@@ -33,26 +27,12 @@ function Catch(rethrow?: boolean) { // factory decorator
         // console.log(target)
         // console.log(propertyKey)
         // console.log(descriptor)
-
         const oldFunc = descriptor.value;
-
-        descriptor.value = function (...args: any[]): any { // override function behavior
-            try {
-                return oldFunc?.apply(this, args);
-            } catch (e) {
-                if (e instanceof Error) {
-                    console.log("catch some error: ", e.message);
-                } else {
-                  console.log("catch some error ")
-                }
-
-                if (!!rethrow) {
-                    throw e;
-                }
-            }
+        descriptor.value = () => { // override function behavior
+            console.log("start function");
+            oldFunc!();
+            // not happend throw error console.log("end function")
         }
-
-        return descriptor;
     }
 }
 
