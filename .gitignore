@@ -1,6 +1,7 @@
 # Default ignored files
 /.idea/
 /build/
+/node_modules/
 /shelf/
 /.idea/workspace.xml
 # Editor-based HTTP Client requests

@@ -1,0 +1,22 @@
+{
+  "name": "ps-typescript-from-scratch",
+  "version": "1.0.0",
+  "description": "project for learning course \"Typescript from scratch\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karp1k/purple-school-typescript-from-scratch.git"
+  },
+  "author": "Karpov Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karp1k/purple-school-typescript-from-scratch/issues"
+  },
+  "homepage": "https://github.com/karp1k/purple-school-typescript-from-scratch#readme",
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
