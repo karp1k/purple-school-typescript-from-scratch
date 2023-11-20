@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/karp1k/purple-school-typescript-from-scratch#readme",
   "dependencies": {
+    "really-relaxed-json": "^0.3.2",
     "reflect-metadata": "^0.1.13"
   }
 }
